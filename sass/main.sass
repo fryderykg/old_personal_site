@@ -113,13 +113,6 @@ section
 //  ABOUT ME SECTION
 .about-me
   background-color: $color-blue
-  .icon
-    @include icon-style
-    transition: 1.5s all
-    &:hover
-      transform: rotate(360deg)
-    a, a:visited, a:active
-      color: $color-beige
 
 //  PORTFOLIO SECTION
 .portfolio
@@ -129,12 +122,18 @@ section
   background: white
   border-radius: 5px
   margin: 20px
+  overflow: hidden
+  &:hover img
+    transform: scale(1.3) translate(0%, 8%)
+
   div
     border: 1px solid transparent
     position: relative
   img
     padding: 5px
     width: 100%
+    transition: transform 1s ease
+
   i
     background: white
     border-radius: 50%
