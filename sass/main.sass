@@ -172,15 +172,36 @@ section
   outline-color: $color-gray-dark
 
 .technologies-item
-  h3
-    margin: 10px auto 30px
   img
     width: 100%
-  .icon
+
+.flip3d
+  border-radius: 20%
+  height: 120px
+  margin: 50px auto
+  position: relative
+  width: 120px
+  &:hover .front
+    transform: perspective(600px) rotateY(-180deg)
+  &:hover .back
+    transform: perspective(600px) rotateY(0deg)
+  @media (max-width: 576px)
+    height: 100px
+    width: 100px
+
+  .front
     @include icon-style
-    &:hover
-      box-shadow: 0 0 0 4px $color-beige, 0 0 0 8px $color-red, 0 25px 15px -5px $color-gray-dark
-      transform: translate(0, -15%)
+    font-size: 4em
+    transform: perspective(600px) rotateY(0deg)
+
+  .back
+    @include icon-style
+    font-size: 2em
+    transform: perspective(600px) rotateY(180deg)
+    &.small
+      font-size: 1.5em
+      @media (max-width: 576px)
+        font-size: 1.3em
 
 //  CONTACT SECTION
 .contact
