@@ -288,7 +288,7 @@ section {
     border-radius: 50%;
     color: #383A3C;
     cursor: pointer;
-    font-size: 2em;
+    font-size: 1.8em;
     height: 50px;
     left: 50%;
     line-height: 1.6em;
@@ -305,6 +305,7 @@ section {
       box-shadow: 0 5px 5px -3px #4c5057;
       transform: translate(20%, -10%); }
     .portfolio-item i.fa-github {
+      font-size: 2em;
       transform: translate(-120%); }
       .portfolio-item i.fa-github:hover {
         transform: translate(-120%, -20%); }
