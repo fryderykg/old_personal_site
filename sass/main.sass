@@ -1,5 +1,6 @@
 @import "variables"
 @import "typography"
+@import "grid"
 
 *
   box-sizing: border-box
@@ -139,7 +140,7 @@ section
     border-radius: 50%
     color: $color-almost-black
     cursor: pointer
-    font-size: 2em
+    font-size: 1.8em
     height: 50px
     left: 50%
     line-height: 1.6em
@@ -156,6 +157,7 @@ section
       box-shadow: 0 5px 5px -3px $color-gray-dark
       transform: translate(20%, -10%)
     &.fa-github
+      font-size: 2em
       transform: translate(-120%)
       &:hover
         transform: translate(-120%, -20%)
@@ -170,15 +172,36 @@ section
   outline-color: $color-gray-dark
 
 .technologies-item
-  h3
-    margin: 10px auto 30px
   img
     width: 100%
-  .icon
+
+.flip3d
+  border-radius: 20%
+  height: 120px
+  margin: 50px auto
+  position: relative
+  width: 120px
+  &:hover .front
+    transform: perspective(600px) rotateY(-180deg)
+  &:hover .back
+    transform: perspective(600px) rotateY(0deg)
+  @media (max-width: 576px)
+    height: 100px
+    width: 100px
+
+  .front
     @include icon-style
-    &:hover
-      box-shadow: 0 0 0 4px $color-beige, 0 0 0 8px $color-red, 0 25px 15px -5px $color-gray-dark
-      transform: translate(0, -15%)
+    font-size: 4em
+    transform: perspective(600px) rotateY(0deg)
+
+  .back
+    @include icon-style
+    font-size: 2em
+    transform: perspective(600px) rotateY(180deg)
+    &.small
+      font-size: 1.5em
+      @media (max-width: 576px)
+        font-size: 1.3em
 
 //  CONTACT SECTION
 .contact
@@ -220,96 +243,3 @@ section
     &:hover
       color: $color-gray-light
       text-decoration: none
-
-// GRID
-.container
-  margin: 0 auto
-  max-width: 1200px
-
-.row
-  display: flex
-  flex-wrap: wrap
-
-// For desktop
-.col-md-1
-  flex: 8.333%
-.col-md-2
-  flex: 16.667%
-.col-md-3
-  flex: 25%
-.col-md-4
-  flex: 33.333%
-.col-md-5
-  flex: 41.667%
-.col-md-6
-  flex: 50%
-.col-md-7
-  flex: 58.333%
-.col-md-8
-  flex: 66.667%
-.col-md-9
-  flex: 75%
-.col-md-10
-  flex: 83.333%
-.col-md-11
-  flex: 91.667%
-.col-md-12
-  flex: 100%
-
-//  FOR TABLETS
-@media (max-width: 768px)
-  .col-sm-0
-    flex: 0
-  .col-sm-1
-    flex: 8.333%
-  .col-sm-2
-    flex: 16.667%
-  .col-sm-3
-    flex: 25%
-  .col-sm-4
-    flex: 33.333%
-  .col-sm-5
-    flex: 41.667%
-  .col-sm-6
-    flex: 50%
-  .col-sm-7
-    flex: 58.333%
-  .col-sm-8
-    flex: 66.667%
-  .col-sm-9
-    flex: 75%
-  .col-sm-10
-    flex: 83.333%
-  .col-sm-11
-    flex: 91.667%
-  .col-sm-12
-    flex: 100%
-
-// FOR MOBILE
-@media (max-width: 576px)
-  .col-xs-0
-    flex: 0
-  .col-xs-1
-    flex: 8.333%
-  .col-xs-2
-    flex: 16.667%
-  .col-xs-3
-    flex: 25%
-  .col-xs-4
-    flex: 33.333%
-  .col-xs-5
-    flex: 41.667%
-  .col-xs-6
-    flex: 50%
-  .col-xs-7
-    flex: 58.333%
-  .col-xs-8
-    flex: 66.667%
-  .col-xs-9
-    flex: 75%
-  .col-xs-10
-    flex: 83.333%
-  .col-xs-11
-    flex: 91.667%
-  .col-xs-12
-    flex: 100%
