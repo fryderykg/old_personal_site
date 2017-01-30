@@ -402,19 +402,15 @@ section {
       background: #f6edd8;
       color: #383A3C; }
 
-.footer {
-  bottom: 0;
-  color: #f6edd8;
-  height: 60px;
-  position: absolute;
-  text-align: center;
-  width: 100%; }
-  .footer a {
+.social {
+  margin: 50px auto; }
+  .social i {
+    font-size: 3em;
+    margin: 0 50px;
     color: #f6edd8; }
-    .footer a:active, .footer a:visited {
+    .social i:active, .social i:visited {
       color: #f6edd8; }
-    .footer a:hover {
-      color: #e3e0dd;
-      text-decoration: none; }
+    .social i:hover {
+      color: #383A3C; }
 
 /*# sourceMappingURL=build.css.map */
