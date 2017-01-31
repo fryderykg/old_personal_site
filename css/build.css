@@ -496,6 +496,7 @@ section {
     border: none;
     font-family: "Roboto", sans-serif;
     margin: 0 auto;
+    padding: 20px;
     width: 550px; }
     @media (max-width: 576px) {
       .contact fieldset {
