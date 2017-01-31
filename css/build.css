@@ -354,7 +354,7 @@ section {
     margin-top: 50px;
     padding: 10px;
     text-shadow: 0 0 0 #4c5057;
-    transition: 1s all ease; }
+    transition: .3s all ease; }
     @media (max-width: 576px) {
       .about-me i {
         margin-top: 0; } }
