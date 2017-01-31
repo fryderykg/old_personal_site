@@ -74,7 +74,7 @@ nav
         right: 20px
         top: 0
         visibility: visible
-        z-index: 100
+        z-index: 25
       &:nth-of-type(4)
         display: none
 
@@ -109,10 +109,119 @@ section
   padding-bottom: 30px
   position: relative
   text-align: center
+  @media (max-width: 768px)
+    min-height: 100vh
 
 //  ABOUT ME SECTION
 .about-me
   background-color: $color-blue
+  overflow: hidden
+  z-index: 0
+
+  .ribbon
+    background: $color-yellow
+    box-shadow: rgba(0, 0, 0, 0.3) 0 5px 10px
+    font-size: 1em
+    line-height: 2em
+    margin: 50px auto 80px
+    max-width: 360px
+    min-width: 260px
+    position: relative
+    text-align: center
+    @media (max-width: 576px)
+      margin: 30px auto
+      max-width: 260px
+    // LEFT AND RIGHT PART OF A RIBBON
+    &:before, &:after
+      border: 24px solid #FFEDC8
+      bottom: -12px
+      content: ''
+      display: block
+      position: absolute
+      z-index: -1
+    &:before
+      border-left-color: rgba(0, 0, 0, 0)
+      border-right-width: 33px
+      box-shadow: rgba(0, 0, 0, 0.3) 2px 2px 1px -1px
+      left: -37px
+    &:after
+      border-left-width: 33px
+      border-right-color: rgba(0, 0, 0, 0)
+      box-shadow: rgba(0, 0, 0, 0.3) -2px 2px 1px -1px
+      right: -37px
+
+  .ribbon-content
+    font-family: Bazar, sans-serif
+    letter-spacing: 0.1em
+    padding: 10px
+    word-spacing: 0.3em
+    // gray triangle
+    &::before, &::after
+      border-color: $color-gray-dark rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0)
+      border-style: solid
+      bottom: -12px
+      content: ''
+      display: block
+      position: absolute
+    &::before
+      border-width: 12px 0 0 20px
+      left: 0
+    &::after
+      border-width: 12px 20px 0 0
+      right: 0
+    // DASHED DECORATION OF A RIBBON
+    span
+      &::before
+        border-top: 1px dashed rgba(0, 0, 0, 0.3)
+        box-shadow: 0 0 2px rgba(255, 255, 255, 0.5)
+        content: ""
+        display: block
+        left: 0
+        margin-top: 2px
+        position: absolute
+        top: 0
+        width: 100%
+      &::after
+        border-top: 1px dashed rgba(0, 0, 0, 0.3)
+        bottom: 0
+        box-shadow: 0 0 2px rgba(255, 255, 255, 0.3)
+        content: ""
+        display: block
+        left: 0
+        margin-bottom: 2px
+        position: absolute
+        width: 100%
+
+  // DOTS AROUND RIBBON
+  .dots
+    background-color: #FFF0CE
+    border-radius: 50%
+    box-shadow: rgba(0, 0, 0, 0.4) 0 1px 1px
+    height: 6px
+    position: absolute
+    top: 32px
+    width: 6px
+    @media (max-width: 768px)
+      display: none
+
+  .dot1
+    left: -50px
+  .dot2
+    left: -75px
+  .dot3
+    left: -100px
+  .dot4
+    left: -125px
+  .dot5
+    right: -50px
+  .dot6
+    right: -75px
+  .dot7
+    right: -100px
+  .dot8
+    right: -125px
+
+  // ARROW ON THE BOTTOM
   i
     color: $color-gray-dark
     font-size: 4em
@@ -120,11 +229,14 @@ section
     padding: 10px
     text-shadow: 0 0 0 $color-gray-dark
     transition: 1s all ease
+    @media (max-width: 576px)
+      margin-top: 0
     &:active, &:visited
       color: $color-gray-dark
     &:hover
       text-shadow: 0 20px 0 $color-gray-dark
       transform: translate(0, 20px)
+
 
 //  PORTFOLIO SECTION
 .portfolio
