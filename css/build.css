@@ -245,6 +245,18 @@ section {
 
 .about-me {
   background-color: #7ac0c0; }
+  .about-me i {
+    color: #4c5057;
+    font-size: 4em;
+    margin-top: 50px;
+    padding: 10px;
+    text-shadow: 0 0 0 #4c5057;
+    transition: 1s all ease; }
+    .about-me i:active, .about-me i:visited {
+      color: #4c5057; }
+    .about-me i:hover {
+      text-shadow: 0 20px 0 #4c5057;
+      transform: translate(0, 20px); }
 
 .portfolio {
   background-color: #e68966; }
