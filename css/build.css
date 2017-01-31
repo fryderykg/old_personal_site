@@ -371,16 +371,29 @@ section {
   background: white;
   border-radius: 5px;
   margin: 20px;
-  overflow: hidden; }
-  .portfolio-item:hover img {
-    transform: scale(1.3) translate(0%, 8%); }
-  .portfolio-item div {
+  overflow: hidden;
+  position: relative; }
+  .portfolio-item:hover .item-text {
+    opacity: 1; }
+  .portfolio-item .item-text {
+    background: rgba(255, 255, 255, 0.85);
+    bottom: 30%;
+    left: 5px;
+    opacity: 0;
+    position: absolute;
+    right: 5px;
+    text-align: center;
+    top: 5px;
+    transition: all 1s ease; }
+    .portfolio-item .item-text p {
+      color: black;
+      padding: 0; }
+  .portfolio-item .links {
     border: 1px solid transparent;
     position: relative; }
   .portfolio-item img {
     padding: 5px;
-    width: 100%;
-    transition: transform 1s ease; }
+    width: 100%; }
   .portfolio-item i {
     background: white;
     border-radius: 50%;
@@ -391,7 +404,6 @@ section {
     left: 50%;
     line-height: 1.6em;
     position: absolute;
-    text-shadow: 2px 2px 5px #4c5057;
     top: -30%;
     transform: translate(20%);
     transition: .5s all;
