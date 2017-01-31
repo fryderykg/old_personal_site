@@ -188,7 +188,7 @@ nav {
         text-decoration: none;
         text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         text-transform: uppercase; }
-        nav ul li a:hover {
+        nav ul li a:not(#toggleMenuIcon):hover {
           color: #e68966; }
 
 @media (max-width: 768px) {
