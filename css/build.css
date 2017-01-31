@@ -143,8 +143,8 @@ p {
 
 body {
   color: #383A3C;
-  margin: 100px 0 0 0;
-  font-family: "Roboto", sans-serif; }
+  font-family: "Roboto", sans-serif;
+  margin: 100px 0 0 0; }
 
 header {
   outline: 1px dashed #f6edd8;
@@ -377,7 +377,7 @@ section {
     opacity: 1; }
   .portfolio-item .item-text {
     background: rgba(255, 255, 255, 0.85);
-    bottom: 30%;
+    bottom: 10%;
     left: 5px;
     opacity: 0;
     position: absolute;
