@@ -250,6 +250,8 @@ section {
   background-color: #7ac0c0;
   overflow: hidden;
   z-index: 0; }
+  .about-me p {
+    padding: 0 12px; }
   .about-me .ribbon {
     background: #fff0ce;
     box-shadow: rgba(0, 0, 0, 0.3) 0 5px 10px;
