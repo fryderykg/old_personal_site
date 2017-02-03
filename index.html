@@ -335,12 +335,13 @@
   <div class="separator"><span>×××</span></div>
   <div class="section-subtitle">I'LL BE GLAD TO ANSWER YOUR QUESTIONS!</div>
 
-  <form action="send-email.php" method="POST" name="contactform">
+  <form action="mailer.php" method="POST" id="ajax-contact">
     <fieldset>
-      <input type="text" name="name" placeholder="Name">
-      <input type="email" name="email" placeholder="Email address">
-      <textarea name="message" id="message" rows="7" placeholder="Your message"></textarea>
+      <input type="text" name="name" placeholder="Name" id="name" required>
+      <input type="email" name="email" placeholder="Email address" id="email" required>
+      <textarea name="message" id="message" rows="7" placeholder="Your message" required></textarea>
       <input type="submit" id="submit" value="Send Message" class="button">
+      <div id="form-messages"></div>
     </fieldset>
   </form>
   <!-- Social icons-->
@@ -356,6 +357,6 @@
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"
         integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
         crossorigin="anonymous"></script>
-<script src="js/script.js"></script>
+<script src="js/build/output.js"></script>
 </body>
 </html>

@@ -40,8 +40,8 @@ module.exports = function(grunt) {
                 separator: '\n'
             },
             dist: {
-                src: ['file_1', 'file_2', 'file_3'],
-                dest: 'build_file'
+                src: ['js/src/script.js', 'js/src/send_mail.js'],
+                dest: 'js/build/output.js'
             }
         },
         uglify: {
